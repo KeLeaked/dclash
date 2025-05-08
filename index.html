@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <title>DC Lash Designer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">DC Lash Designer ✨</h1>
+    <nav>
+      <ul class="nav">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contato">Agendar</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#curso">Curso</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <h2>Realce seus Cílios ✨</h2>
+  </section>
+  
+
+  <section class="sobre" id="sobre">
+    <h2>Sobre Mim</h2>
+    <div class="sobre-container">
+      <div class="sobre-foto">
+        <img src="photos/eu.png" alt="Lash Designer" />
+      </div>
+      <div class="sobre-texto">
+        <p>
+          Sou especialista em realçar o olhar com cílios perfeitos. Uso técnicas modernas e produtos de alta qualidade para garantir um resultado impecável.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="trabalhos">
+    <h2>Meus Trabalhos</h2>
+    <div class="slider">
+      <div class="slider-track">
+        <img src="photos/t1.png" alt="Trabalho 1" />
+        <img src="photos/t2.png" alt="Trabalho 2" />
+        <img src="photos/t3.png" alt="Trabalho 3" />
+        <img src="photos/t4.png" alt="Trabalho 4" />
+        <img src="photos/t1.png" alt="Trabalho 5" />
+        <!-- Duplicar para looping suave -->
+        <img src="photos/t1.png" alt="Trabalho 1" />
+        <img src="photos/t2.png" alt="Trabalho 2" />
+        <img src="photos/t3.png"alt="Trabalho 3" />
+        <img src="photos/t4.png" alt="Trabalho 4" />
+        <img src="photos/t1.png" alt="Trabalho 5" />
+      </div>
+    </div>
+  </section>
+
+  <section class="catalogo" id="catalogo">
+    <h2>Catálogo de Cílios</h2>
+    <div class="catalogo-grid">
+      <div class="item-catalogo" data-info="Brow Lamination - Perfeito para sobrancelhas alinhadas e volumosas." onclick="openModal('photos/bl.png', 'Brow Lamination', 'Brow Lamination')">
+        <img src="photos/bl.png" alt="Cílios Brow Lamination" />
+        <h3>Brow Lamination</h3>
+      </div>
+      <div class="item-catalogo" data-info="Volume Árabe - Cílios volumosos e glamourosos." onclick="openModal('photos/va.png', 'Volume Árabe', 'Volume Árabe')">
+        <img src="photos/va.png" alt="Cílios Volume Árabe" />
+        <h3>Volume Árabe</h3>
+      </div>
+      <div class="item-catalogo" data-info="Volume Brasileiro - Volume e naturalidade combinados." onclick="openModal('photos/vb.png', 'Volume Brasileiro', 'Volume Brasileiro')">
+        <img src="photos/vb.png" alt="Cílios Volume Brasileiro" />
+        <h3>Volume Brasileiro</h3>
+      </div>
+    </div>
+    <a href="Catalogo.html" class="btn-ver-mais">✨ Ver Mais ✨</a>
+  </section>
+  
+  <!-- Modal de Informações do Catálogo -->
+  <div id="modal-catalogo" class="modal">
+    <span class="fechar">&times;</span>
+    <div class="modal-conteudo">
+      <img id="modalImg" src="" alt="Imagem do Produto">
+      <p id="modalInfo"></p>
+      <a id="whatsapp-link" href="https://wa.me/?text=" target="_blank">
+        <button class="btn-agendar">Agende agora</button>
+      </a>
+    </div>
+  </div>
+  
+
+
+  <section class="mapa">
+    <h2>Localização</h2>
+    <div class="mapa-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.402527056295!2d-46.41600048499462!3d-23.553847667630734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce693c0f8d7ccf%3A0x75b6d50fc6c3430a!2sTv.%20Pombinha%20Branca%2C%2024%20-%20Jardim%20da%20Conquista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2008343-510!5e0!3m2!1spt-BR!2sbr!4v1683239733704!5m2!1spt-BR!2sbr" 
+        width="100%" 
+        height="300" 
+        style="border:0; border-radius: 15px; box-shadow: 0 0 15px rgba(0,0,0,0.2);" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+  
+
+  <footer class="footer">
+    <p>&copy; 2025 DC Lash Designer | Siga no Instagram @dc__lash</p>
+    <p>
+      📍 <a href="https://www.google.com/maps/place/Tv.+Pombinha+Branca,+24+-+Jardim+da+Conquista,+São+Paulo+-+SP,+08343-510" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      style="color: #4a004a; text-decoration: underline;">
+        Tv. Pombinha Branca, 24 - Jardim da Conquista (Zona Leste), São Paulo - SP, 08343-510
+      </a>
+    </p>
+  </footer>
+  
+
+  <!-- Botão WhatsApp -->
+  <a href="https://wa.me/+5511932006989" class="whatsapp" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp">
+  </a>
+
+  <!-- Modal de Imagem -->
+  <div id="modal" class="modal">
+    <span class="fechar">&times;</span>
+    <img class="modal-conteudo" id="imgModal">
+  </div>
+  
+</body> 
+</html>

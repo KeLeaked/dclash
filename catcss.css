@@ -1,0 +1,285 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: #fff0f6;
+    color: #4a004a;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.5rem; /* Menor espaçamento */
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: box-shadow 0.3s ease-in-out; /* Efeito de transição na sombra */
+}
+
+/* Logo */
+.logo {
+    font-size: 1.5rem; /* Logo mais compacta */
+    color: #d63384;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 20; /* Garantir que o logo fique à frente de outros elementos */
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Efeito de zoom leve na logo */
+}
+
+/* Navegação */
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+}
+
+.nav li {
+    margin: 0 1rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #4a004a;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav a:hover {
+    color: #d63384;
+    transform: translateY(-2px);
+}
+
+/* Catálogo */
+.catalogo {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    margin: 2rem auto;
+    box-shadow: 0 0 20px rgba(214, 51, 132, 0.15);
+    max-width: 1000px;
+    text-align: center;
+}
+
+.catalogo h2 {
+    font-size: 2rem;
+    color: #d63384;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Grid dos Itens do Catálogo */
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+/* Estilos dos Itens */
+.item-catalogo {
+    background: #fff;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(214, 51, 132, 0.15);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.item-catalogo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(214, 51, 132, 0.2);
+}
+
+/* Imagens do Catálogo */
+.item-catalogo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.item-catalogo img:hover {
+    transform: scale(1.05);
+}
+
+/* Títulos e Descrições */
+.item-catalogo h3 {
+    font-size: 1.4rem;
+    color: #4a004a;
+    margin: 0.75rem 0;
+    font-weight: bold;
+}
+
+.item-catalogo p {
+    font-size: 1rem;
+    color: #4a004a;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Botão Agendar Agora */
+.btn-agendar {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: #d63384;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-agendar:hover {
+    background: #a61e4d;
+    transform: translateY(-3px);
+}
+
+/* Botão Voltar para Página Inicial */
+.btn-voltar {
+    display: inline-block;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    background-color: #d63384;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    position: center;
+    top: 20px;
+    left: 20px;
+}
+
+.btn-voltar:hover {
+    background-color: #a61e4d;
+    transform: scale(1.05);
+}
+
+/* Botão Ver Mais */
+.btn-ver-mais {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #d63384;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.btn-ver-mais:hover {
+    background-color: #a61e4d;
+    transform: scale(1.05);
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+    .catalogo {
+        padding: 2rem 1rem;
+    }
+
+    .catalogo h2 {
+        font-size: 2rem;
+    }
+
+    .item-catalogo img {
+        height: 160px;
+    }
+
+    .item-catalogo h3 {
+        font-size: 1.2rem;
+    }
+
+    .item-catalogo p {
+        font-size: 0.95rem;
+    }
+
+    .btn-agendar {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .btn-voltar {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+        top: 10px;
+        left: 10px;
+    }
+
+    .btn-ver-mais {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.3rem;
+    }
+}
+/* Container principal das imagens */
+.item-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Imagem principal */
+.main-image img {
+    width: 80%; /* Ajuste o tamanho da imagem principal */
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.main-image img:hover {
+    transform: scale(1.05); /* Efeito de zoom */
+}
+
+/* Miniaturas das imagens */
+.image-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.image-thumbnails img {
+    width: 60px;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-thumbnails img:hover {
+    transform: scale(1.1); /* Efeito de zoom nas miniaturas */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .main-image img {
+        width: 100%;
+    }
+
+    .image-thumbnails img {
+        width: 40px;
+    }
+}
